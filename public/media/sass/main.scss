@@ -1,0 +1,86 @@
+/*
+COLORS:
+*/
+$light_green: #a4bf47;
+$medium_green: #59ab4c;
+//$dark_green: #59ab4c;
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+@font-face{
+    font-family: "GothamPro";
+    src : url("../font/GothamProNarrow-Bold.ttf");
+  }
+body{
+  font-family: GothamPro;
+  color: black;
+  padding: 30px;
+
+}
+.head_phone{
+  float: right;
+}
+.tel_link{
+  font-size: 26px;
+  color: $medium_green;
+  line-height: 50px;
+}
+.shop-card-head{
+  img{
+    height: 50px;
+    width: 50px;
+  }
+  span{
+    text-transform: uppercase;
+    padding-left: 20px;
+    color: black;
+    line-height: 50px;
+  }
+}
+.nav_header{
+  background-image: url("../img/img/green.png");
+  // background-color: $medium_green;
+  a{
+    text-transform: uppercase;
+    color: #fff;
+    font-family: GothamPro;
+    font-size: 18px;
+    
+    &:hover{
+      background-color: lighten($medium_green, 10%);
+      color: black;
+    }
+  }
+}
+.carousel-item{
+  height: 500px;
+}
+// catalog
+.collection_item{
+  a{
+    text-align: center;
+    color: black;
+    text-decoration: none;
+  }
+}
+.name_collection{
+  color: $medium_green;
+  text-align: center;
+}
+.img-wrap{
+  height: 100px;
+  background-color: grey;
+  &:hover{
+    border: 5px solid $medium_green;
+  }
+}
+footer{
+  background-image: url("../img/img/green.png");
+  color: white;
+}

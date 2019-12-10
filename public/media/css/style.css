@@ -1,0 +1,49 @@
+/*
+COLORS:
+*/
+@font-face {
+  font-family: "GothamProBlack";
+  src: url("../font/GothamPro-Black.ttf"); }
+
+body {
+  font-family: GothamProBlack;
+  color: black;
+  padding: 30px; }
+
+.head_phone {
+  float: right; }
+
+.tel_link {
+  font-size: 26px;
+  color: #59ab4c;
+  line-height: 50px; }
+
+.shop-card-head img {
+  height: 50px;
+  width: 50px; }
+
+.shop-card-head span {
+  text-transform: uppercase;
+  padding-left: 20px;
+  color: black;
+  line-height: 50px; }
+
+.nav_header {
+  background-image: url("../img/img/green.png"); }
+  .nav_header a {
+    text-transform: uppercase;
+    color: #fff;
+    font-family: GothamPro;
+    font-size: 18px; }
+    .nav_header a:hover {
+      background-color: #77be6c;
+      color: black; }
+
+/*container index.blade.php*/
+.list-group{
+  margin-top: 24px;
+}
+
+footer {
+  background-image: url("../img/img/green.png");
+  color: white; }
