@@ -9,11 +9,20 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+
+      <div class="col-lg-3">
+        <div class="list-group">
+         @foreach($categories as $cat)
+         <a href="{{asset('category/'.$cat->id)}}" class="list-group-item">{{$cat->name}}</a>
+         @endforeach
+        </div>
+      </div>
+
         <div class="col-md-9">
             <div class="card">
                 <div class="card-header">{{$obj->name}}</div>
 
-                <div class="card-body">
+                <div class="row">
                    @foreach($products as $prod)
                    <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
@@ -42,6 +51,7 @@
                        {!!$products->links()!!}
                    </p>
                 </div>
+                <!-- end row -->
             </div>
         </div>
     </div>

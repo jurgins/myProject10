@@ -12,13 +12,6 @@
          @endforeach
         </div>
 
-        <div class="list-group">
-          <a href="#" class="list-group-item">Навигаторы</a>
-          <a href="#" class="list-group-item">Видеорегистраторы</a>
-          <a href="#" class="list-group-item">Зеркала с видеорегистратором</a>
-          <a href="#" class="list-group-item">Аксессуары</a>
-        </div>
-
       </div>
       <!-- /.col-lg-3 -->
 
