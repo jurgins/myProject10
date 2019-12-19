@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3307
--- Время создания: Дек 12 2019 г., 21:08
--- Версия сервера: 8.0.12
--- Версия PHP: 7.2.10
+-- Время создания: Дек 19 2019 г., 18:27
+-- Версия сервера: 8.0.15
+-- Версия PHP: 7.2.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -138,7 +138,7 @@ CREATE TABLE `products` (
   `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `descriptionKratk` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `category_id` int(11) NOT NULL,
-  `picture` tinytext COLLATE utf8mb4_unicode_ci,
+  `picture` tinytext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `comments` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `user_id` int(11) NOT NULL,
   `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -152,13 +152,13 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`id`, `name`, `phone`, `nameProduct`, `price`, `description`, `descriptionKratk`, `category_id`, `picture`, `comments`, `user_id`, `status`, `created_at`, `updated_at`) VALUES
 (1, 'stas', '7482809', 'навигатор Пионер', '100', 'навигатор пионер 325', 'черный', 1, NULL, 'нет', 2, 'new', '2019-11-09 22:14:16', '2019-11-09 22:14:16'),
-(2, 'stas', '7482809', 'радар', '500', 'радар Геофокс Р5', 'черный', 3, NULL, 'нет', 2, 'new', '2019-11-13 12:00:12', '2019-11-13 12:00:12'),
+(2, 'stas', '7482809', 'радар', '500', '<p>радар Геофокс Р5</p>', 'черный', 5, '19_12_12_11_05_55.jpg', NULL, 2, 'new', '2019-11-13 12:00:12', '2019-12-12 20:05:55'),
 (3, 'stas', '45512', 'навигатор', '125', 'навигатор Пионер 705', 'черный', 1, NULL, 'нет', 2, 'new', '2019-11-13 13:33:13', '2019-11-13 13:33:13'),
 (4, 'stas', '45512', 'навигатор', '125', 'черный навигатор', 'черный', 1, NULL, 'нет', 2, 'new', '2019-11-13 13:34:37', '2019-11-13 13:34:37'),
 (5, 'stas', '45512', 'навигатор', '125', '<p>Навигатор Пионер 705</p>', 'черный', 1, NULL, NULL, 2, 'new', '2019-11-13 14:14:20', '2019-11-13 14:14:20'),
-(6, 'stas', '45512', 'навигатор', '125', '<p>Pioner</p>', 'black', 1, '19_12_02_08_43_43.jpg', NULL, 2, 'new', '2019-11-18 17:52:31', '2019-12-02 17:43:43'),
-(8, 'stas', '45512', 'навигатор', '125', '<p>pioner</p>', 'black', 1, '19_12_02_08_12_56.jpg', NULL, 2, 'new', '2019-11-18 18:02:52', '2019-12-02 17:12:56'),
-(9, 'stas', '7482809', 'радар', '100', '<p>черны радар Пионер</p>', 'черный', 5, '19_12_12_07_30_29.jpg', NULL, 2, 'new', '2019-12-12 16:30:29', '2019-12-12 16:30:29');
+(6, 'stas', '7482809', 'навигатор', '125', '<p>Pioner</p>', 'black', 4, '19_12_12_11_05_17.jpg', NULL, 2, 'new', '2019-11-18 17:52:31', '2019-12-12 20:05:17'),
+(8, 'stas', '7482809', 'навигатор', '125', '<p>pioner</p>', 'black', 4, '19_12_12_11_04_24.jpg', NULL, 2, 'new', '2019-11-18 18:02:52', '2019-12-12 20:04:25'),
+(9, 'stas', '7482809', 'радар', '100', '<p>черны радар Пионер</p>', 'черный', 5, '19_12_12_11_03_37.jpg', NULL, 2, 'new', '2019-12-12 16:30:29', '2019-12-12 20:03:37');
 
 -- --------------------------------------------------------
 

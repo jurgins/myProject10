@@ -1,10 +1,15 @@
 @extends('layouts.base')
 @section('scripts')
 @parent
+<script src="{{asset('media/js/modal.js')}}"></script>
 <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
 <script>
     CKEDITOR.replace("description");
 </script>
+@endsection
+@section('styles')
+  @parent
+  <link href="{{asset('media/css/modal.css')}}" rel="stylesheet"/>
 @endsection
 @section('content')
 <div class="container">

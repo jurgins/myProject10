@@ -1,0 +1,12 @@
+.modal-window{
+	position: fixed;
+	top: 150px;
+	left: 50%;
+	width: 600px;
+	margin-left: -300px;
+	border: solid 1px grey;
+	box-shadow: 1px 1px 1px black;
+	padding: 10px;
+	background-color: white;
+	border-radius: 6px;
+}
