@@ -2,6 +2,12 @@ $(function(){
 	let fx = {
 		'initModal':function(){
 			if($('.modal-window').length === 0){
+				$('<div>').attr('id','jquery-overlay').fadeIn('slow').appendTo('body').click(
+					function(){
+						$('.modal-window').remove();
+						$('#jquery-overlay').remove();
+					}
+					);
 				return $('<div>').addClass('modal-window').appendTo('body');
 			}else{
 				return $('.modal-window');
@@ -22,8 +28,17 @@ $(function(){
 			error: function(msg){
 				console.log(msg);
 			}
-
 		});
+		$('<a>').attr('href','#')
+				.addClass('modal-close-btn')
+				.html('&times;')
+				.click(function(){
+					$('#jquery-overlay').fadeOut('slow', function(){
+						$(this).remove();
+					})
+					modal.remove();
+				}).appendTo(modal);
 	});
 
 });
+

@@ -1,5 +1,12 @@
 @extends('layouts.base')
-
+@section('scripts')
+@parent
+<script src="{{asset('media/js/modal.js')}}"></script>
+@endsection
+@section('styles')
+  @parent
+  <link href="{{asset('media/css/modal.css')}}" rel="stylesheet"/>
+@endsection
 @section('content')
 <div class="container">
 
@@ -45,39 +52,7 @@
         </div>
 
         <div class="row">
-@foreach($products as $prod)
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              @if($prod->picture)
-              <a href="#"><img class="card-img-top" src="{{asset('uploads/'.$prod->user_id.'/'.$prod->picture)}}" width="100%" alt=""></a>
-              @else
-               <a href="#"><img class="card-img-top" src="{{asset('uploads/no_photo.jpg')}}" width="100%" alt=""></a>
-              @endif
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">{{$prod->nameProduct}}</a>
-                </h4>
-                <h5>{{$prod->price}}</h5>
-                <p class="card-text">{!!$prod->description!!}</p>
-              </div>
-              <div class="card-footer">
-                        <a href="#" data-id="{{$prod->id}}" class="btn btn-primary btn-sm my_modal">Открыть</a>
-                        <a href="#" data-id="{{$prod->id}}" class="btn btn-primary btn-sm go">Перейти</a>
-                        <a href="#" data-id="{{$prod->id}}" class="btn btn-primary btn-sm buy">Купить</a>
-             </div>
-            </div>
-          </div>
-
-@endforeach
-
-
-
-
-
-
-
-   
-
+@include('includes.product')
         </div>
         <!-- /.row -->
 

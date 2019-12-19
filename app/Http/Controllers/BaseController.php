@@ -8,7 +8,7 @@ class BaseController extends Controller
 {
     public function getIndex (){
     	$categories = Category::all();
-$products = Product::limit(6)->get();
+$products = Product::limit(6)->paginate(6);
 	return view('index', compact('categories', 'products'));
 	}
 }
