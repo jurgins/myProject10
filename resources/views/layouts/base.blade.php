@@ -81,7 +81,28 @@
         </div>
       </div>
       <div class="container">
-        <div class="row"></div>
+        <div class="row">
+          <div class="list-group list-group-flush">
+            <div id="basket">
+            <table id="bascets">
+                <tbody>
+                <tr style="display: none;" class="hPb">
+                    <td>Выбрано:</td>
+                    <td><span id="totalGoods">0</span> товаров</td>
+                    <td>Сумма: &asymp; </td>
+                    <td><span id="totalPrice">0</span> руб.</td>
+                </tr>
+                <tr style="display: table-row;" class="hPe">
+                    <td colspan="2">Корзина пуста</td>
+                </tr>
+                <tr>
+                    <td><a style="display: none;" id="clearBasket" href="#">Очистить</a></td>
+                    <td><a style="display: none;" id="checkOut" href="{{asset('basket')}}">Оформить</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
       </div>
       <div class="navbar">
         <ul class="navbar-nav ml-auto">
@@ -150,6 +171,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+    <script src="{{asset('media/js/jquery.cookie.js')}}"></script>
+    <script src="{{asset('media/js/cart.js')}}"></script>
 @section('scripts')
 
 @show
