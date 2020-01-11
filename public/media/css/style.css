@@ -5,6 +5,10 @@ COLORS:
   font-family: "GothamProBlack";
   src: url("../font/GothamPro-Black.ttf"); }
 
+#basic-text1{
+  width: 50px;
+}
+
 body {
   font-family: GothamProBlack;
   color: black;

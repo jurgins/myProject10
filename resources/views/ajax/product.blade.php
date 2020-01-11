@@ -24,8 +24,10 @@
 			</div>
 
 			<div class="text-center">
-                <button class="btn btn-primary">Купить</button>
+               <a href="#html" data-id="{{$obj->id}}" id="good-{{$obj->id}}-{{$obj->price}}-modal" class="btn btn-primary btn-sm buy addCart"><span class="glyphicon glyphicon-list"></span>Add to cart</a>
             </div>
 
 		</div>
 </div>
+    <script src="{{asset('media/js/jquery.cookie.js')}}"></script>
+    <script src="{{asset('media/js/cart.js')}}"></script>

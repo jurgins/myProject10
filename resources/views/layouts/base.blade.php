@@ -71,19 +71,25 @@
           </div>
           <!-- end modal -->
           <div class="hidden-xs col-md-3 col-sm-3">
-            <div class="shop-card-head">
-              <a href="#" class="basket">
-                <img src="{{asset('media/img/img/basket.svg')}}"/>
-                <span>Корзина пуста</span>
-              </a>
-            </div>
-          </div>
+              <div class="input-group md-form form-sm form-1 pl-0">
+                <div class="input-group-prepend">
+                 <form action="{{asset('search')}}" metod="get">
+                    @csrf
+                    <button class="input-group-text purple lighten-3" id="basic-text1" type="submit">
+                    <img src="{{asset('media/img/img/search_icon.png')}}" width="100%"/>
+                  </button>
+                </div>
+                <input class="form-control my-0 py-1" type="search" name="search" placeholder="Поиск" aria-label="Search">
+                 </form>
+              </div>
+         </div>
         </div>
       </div>
       <div class="container">
         <div class="row">
           <div class="list-group list-group-flush">
             <div id="basket">
+              <img src="{{asset('media/img/img/basket.svg')}}"/>
             <table id="bascets">
                 <tbody>
                 <tr style="display: none;" class="hPb">
