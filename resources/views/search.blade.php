@@ -15,6 +15,7 @@
         <div class="col-md-9">
             <div class="card">
               <h2>Найденны следующие товары</h2>
+              @if(count($obj_prod)>0)
               @foreach($obj_prod as $prod)
                    <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
@@ -39,6 +40,9 @@
                     </div>
                   </div>
               @endforeach
+              @else
+              <div><h2>Ничего не найденно</h2></div>
+              @endif
               @foreach($obj_cat as $obj)
                 <div class="card-header">{{$obj->name}}</div>
               @endforeach
