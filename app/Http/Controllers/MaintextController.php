@@ -6,6 +6,12 @@ class MaintextController extends Controller
 {
     public function getIndex($url = null){
     	$obj = Maintext::where('url', $url)->first();
-    	return view( 'static', compact('url', 'obj'));
+    	// print version
+    	if(isset($_GET['print'])){
+    		$print = 'print';
+    	}else {
+    		$print = 'base';
+    	}
+    	return view( 'static', compact('url', 'obj', 'print'));
     }
 }
