@@ -14,6 +14,13 @@ body {
   color: black;
   padding: 30px; }
 
+.imgBasket{
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
 .head_phone {
   float: right; }
 
@@ -46,6 +53,10 @@ body {
 /*container index.blade.php*/
 .list-group{
   margin-top: 24px;
+}
+.card{
+  border-radius: 3px;
+  box-shadow: 0, 1.5rem, 4rem, rgba(0, 0, 0, 0.1);
 }
 
 footer {

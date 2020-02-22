@@ -22,100 +22,19 @@
 
     </head>
   <body style="margin: 0; padding: 0;">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Always expand</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarsExample02">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-md-0">
-          <input class="form-control" type="text" placeholder="Search">
-        </form>
-      </div>
-    </nav>
 
     <header class="header">
-      <div class="container">
-        <!-- <div class="row"> -->
-
-        <!-- </div> -->
-
-        <div class="row">
-          <div class="col-xs-12 col-md-3 col-sm-3">
-            <div class="logo-box">
-             <a href="#" class="logo_link"><img src="{{asset('media/img/img/logo.png')}}" alt="Logo" class="logo"/></a>
-            </div>
-          </div>
-          <div class="col-xs-12 col-md-6 col-sm-6">
-            <p class="head_phone">
-              <a href="tel:+375(29)6500000" class="tel_link">
-                +375 (29) 650 00 00
-              </a>
-            </p>
-          </div>
-           <!-- Button trigger modal -->
-          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-            Заказать звонок
-          </button>
-
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Заказать звонок</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <form>
-                    <div class="form-group">
-                      <label for="name">Имя</label>
-                      <input type="text" class="form-control" id="name" placeholder="Ваше Имя">
-                    </div>
-                    <div class="form-group">
-                      <label for="phone">Телефон</label>
-                      <input type="password" class="form-control" id="phone" placeholder="Ваш телефон">
-                      <small id="phoneHelp" class="form-text text-muted">Мы никогда не передадим ваш телефон кому-либо еще.</small>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Заказать</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- end modal -->
-          <div class="hidden-xs col-md-3 col-sm-3">
-              <div class="input-group md-form form-sm form-1 pl-0">
-                <div class="input-group-prepend">
-                 <form action="{{asset('search')}}" metod="get">
-                    @csrf
-                    <button class="input-group-text purple lighten-3" id="basic-text1" type="submit">
-                    <img src="{{asset('media/img/img/search_icon.png')}}" width="100%"/>
-                  </button>
-                </div>
-                <input class="form-control my-0 py-1" type="search" name="search" placeholder="Поиск" aria-label="Search">
-                 </form>
-              </div>
-         </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="list-group list-group-flush">
-            <div id="basket">
-              <img src="{{asset('media/img/img/basket.svg')}}"/>
-            <table id="bascets">
+        <div class="row" style="background-color: rgba(0, 0, 0, 0.9); margin-bottom: 1.5em;">
+          <div class="container">
+            <ul class="nav justify-content-end" style="color: white;">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <img src="{{asset('media/img/img/basket.svg')}}" class="imgBasket" />
+            </li>
+            <li class="nav-item">
+              <table id="bascets">
                 <tbody>
                 <tr style="display: none;" class="hPb">
                     <td>Выбрано:</td>
@@ -132,9 +51,80 @@
                 </tr>
                 </tbody>
             </table>
+              <!-- <a class="nav-link" href="#">Link</a> -->
+            </li>
+          </ul>
+          </div>
         </div>
-        </div>
-      </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-md-3 col-sm-3">
+              <div class="logo-box">
+               <a href="#" class="logo_link"><img src="{{asset('media/img/img/logo.png')}}" alt="Logo" class="logo"/></a>
+             </div>
+           </div>
+           <div class="col-xs-12 col-md-3 col-sm-3">
+            <p class="head_phone">
+              <a href="tel:+375(29)6500000" class="tel_link">
+                +375 (29) 650 00 00
+              </a>
+            </p>
+          </div>
+
+          <!-- Button trigger modal -->
+          <div class="col-xs-12 col-md-2 col-sm-2">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+              Заказать звонок
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Заказать звонок</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input type="text" class="form-control" id="name" placeholder="Ваше Имя">
+                      </div>
+                      <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="password" class="form-control" id="phone" placeholder="Ваш телефон">
+                        <small id="phoneHelp" class="form-text text-muted">Мы никогда не передадим ваш телефон кому-либо еще.</small>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Заказать</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end col-md-2 -->
+
+            <!-- end modal -->
+            <div class="hidden-xs col-md-4 col-sm-4">
+              <div class="input-group md-form form-sm form-1 pl-0">
+                <div class="input-group-prepend">
+                 <form class="form-inline" action="{{asset('search')}}" metod="get">
+                  @csrf
+                  <input class="form-control my-0 py-1" type="search" name="search" placeholder="Поиск" aria-label="Search">
+                  <button class="input-group-text purple lighten-3" id="basic-text1" type="submit">
+                    <img src="{{asset('media/img/img/search_icon.png')}}" width="100%"/>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div> <!-- end col-md-4 -->
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+
+
       <div class="navbar">
         <ul class="navbar-nav ml-auto">
           <!-- Authentication Links -->
@@ -172,11 +162,27 @@
 
     </header>
 
-    <nav class="nav nav-pills nav-fill nav_header">
-      <a class="nav-item nav-link" href="#">Каталог</a>
-      <a class="nav-item nav-link" href="{{asset('about')}}">O компании</a>
-      <a class="nav-item nav-link" href="{{asset('otzav')}}">Отзывы</a>
-      <a class="nav-item nav-link" href="{{asset('contact')}}">Контакты</a>
+    <nav class="navbar navbar-dark navbar-expand-lg nav_header">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarsExample02">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Каталог</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{asset('about')}}">O компании</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{asset('otzav')}}">Отзывы</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{asset('contact')}}">Контакты</a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     @yield('content')
